@@ -1,0 +1,378 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6efe6;
+  font-family: "Poppins", sans-serif;
+  color: #ff5c9a;
+  overflow-x: hidden; /* fix unwanted horizontal scroll */
+}
+
+/* ================= SITE LOGO ================= */
+.logo-wrap {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+  width: 46px;
+  height: 46px;
+  border: 1.5px solid #e58aa9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  user-select: none;
+}
+
+.logo-text {
+  font-family: "Great Vibes", cursive;
+  font-size: 26px;
+  font-weight: 400;
+  color: #e58aa9;
+  line-height: 1;
+  transform: translateY(2px); /* visual centering */
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 90px 12%;
+  align-items: center;
+  gap: 80px;
+  
+}
+
+.hero-right h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 68px;
+  line-height: 1.1;
+}
+
+.role {
+  margin: 25px 0 35px;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.btn {
+  padding: 14px 36px;
+  border: 1px solid #ff5c9a;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #ff5c9a;
+  font-size: 14px;
+}
+
+.main-img {
+  width: 320px;
+  border-radius: 40px;
+}
+
+/* ================= INTRO SECTION ================= */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 100px 12%;
+  align-items: center;
+  gap: 80px;
+}
+
+.intro-images {
+  position: relative;
+  width: 420px;  /* lock canvas width */
+  height: 320px; /* lock canvas height */
+}
+
+.intro-images img {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+/* left image */
+.intro-images img:first-child {
+  top: 0;
+  left: 0;
+}
+
+/* right image */
+.intro-images img:last-child {
+  top: 80px;
+  left: 200px;
+}
+
+.intro-text h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.btn-outline {
+  padding: 12px 32px;
+  border: 1px solid #ff5c9a;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #ff5c9a;
+  font-size: 13px;
+}
+
+/* ================= SERVICES ================= */
+/* ================= SERVICES ================= */
+.services {
+  background: #ff5c9a;
+  padding: 110px 12%;
+  color: #ffffff;
+  text-align: center;
+}
+
+.services h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+
+/* GRID */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+  gap: 50px;
+}
+
+/* CARD */
+.service-card {
+  background: #ff77b3;
+  padding: 55px 35px 60px;
+  border-radius: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.35s ease;
+}
+
+/* ICON */
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 32px;
+}
+
+/* TITLE */
+.service-card h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* TEXT */
+.service-card p {
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.95;
+}
+
+/* STAGGER EFFECT ON DESKTOP */
+.service-card:nth-child(1) {
+  transform: translateY(-20px);
+}
+
+.service-card:nth-child(2) {
+  transform: translateY(20px);
+}
+
+.service-card:nth-child(3) {
+  transform: translateY(-20px);
+}
+
+/* HOVER EFFECT (optional) */
+.service-card:hover {
+  transform: translateY(-40px);
+}
+
+/* RESPONSIVE FIX: stack vertically on smaller screens */
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 50px;
+  }
+
+  .service-card {
+    transform: none; /* remove stagger effect */
+  }
+
+  .service-card:hover {
+    transform: none; /* remove hover effect on mobile */
+  }
+}
+
+/* ================= BRANDS ================= */
+.brands {
+  padding: 90px 12%;
+  text-align: center;
+}
+
+.brands h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.brand-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.brand-list span {
+  padding: 16px;
+  border: 1px solid #ff5c9a;
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonials {
+  background: #ff5c9a;
+  padding: 90px 12%;
+  color: white;
+}
+
+.testimonials h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.testimonial img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 120px 12%;
+  align-items: center;
+  gap: 90px;
+  background: #f6efe6;
+}
+
+.contact-left h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 46px;
+  line-height: 1.15;
+  margin-bottom: 45px;
+}
+
+.contact-info {
+  margin-bottom: 26px;
+}
+
+.contact-info strong {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-info p {
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.contact-right {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact-right img {
+  width: 340px;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .services {
+    padding: 90px 8%;
+  }
+  .service-grid,
+  .brand-list {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .service-card {
+    transform: none;
+    min-height: auto;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 90px 8%;
+  }
+  .contact-left {
+    text-align: center;
+  }
+  .contact-right {
+    justify-content: center;
+    padding-top: 40px;
+  }
+  .contact-right img {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-wrap {
+    left: 16px;
+  }
+  .hero,
+  .intro,
+  .contact {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .main-img,
+  .contact-right img {
+    margin: 0 auto;
+  }
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service-card {
+    transform: none;
+    min-height: auto;
+  }
+  .service-grid,
+  .brand-list {
+    grid-template-columns: 1fr;
+  }
+}
